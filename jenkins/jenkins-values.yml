@@ -3,7 +3,7 @@ Master:
   NodePort: 32000
   ContainerEnv:
     - name: CASC_JENKINS_CONFIG
-      value: https://raw.githubusercontent.com/ThomasClaessens/testRepo2/3-jjb/casc/config.yml
+      value: https://raw.githubusercontent.com/ThomasClaessens/testRepo2/4-casc-loop/casc/config.yml
     - name: JENKINS_URL
       value: http://192.168.99.100:32000
   # List of plugins to be install during Jenkins master start

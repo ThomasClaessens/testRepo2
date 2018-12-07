@@ -36,7 +36,7 @@ jobs:
             scm { 
               git { 
                 remote { url('git://github.com/ThomasClaessens/testRepo2.git') } 
-                branches('3-jjb') 
+                branches('4-casc-loop') 
                 scriptPath('jenkins-job-builder/Jenkinsfile')
               }
             }
