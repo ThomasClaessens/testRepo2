@@ -25,6 +25,8 @@ jenkins:
           password: "admin123"
         - id: "user"
           password: "user123"
+        - id: "user2"
+          password: "user1234"
 jobs:
   - script: >
       pipelineJob('Jenkins Job Builder') { 
