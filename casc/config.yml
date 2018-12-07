@@ -25,6 +25,24 @@ jenkins:
           password: "admin123"
         - id: "user"
           password: "user123"
+jobs:
+  - script: >
+      pipelineJob('Jenkins Job Builder') { 
+        definition { 
+          triggers {
+            scm('* * * * *')
+          }
+          cpsScm { 
+            scm { 
+              git { 
+                remote { url('git://github.com/ThomasClaessens/testRepo2.git') } 
+                branches('3-jjb') 
+                scriptPath('jenkins-job-builder/Jenkinsfile')
+              }
+            }
+          }
+        }
+      }
 unclassified:
   location:
     url: ${JENKINS_URL}
